@@ -11,7 +11,7 @@ const SecurityScalability = () => {
           {/* Security Section */}
           <div>
             <div className="flex items-center gap-3 mb-8">
-              <div className="p-2 bg-orange-500/10 rounded-lg text-orange-500">
+              <div className="p-2 bg-stone-800 rounded-lg text-stone-200">
                 <Shield className="w-6 h-6" />
               </div>
               <h2 className="text-3xl font-serif font-medium">
@@ -26,7 +26,7 @@ const SecurityScalability = () => {
 
             <div className="space-y-6">
               <div className="flex gap-4">
-                <Lock className="w-5 h-5 text-orange-500 shrink-0 mt-1" />
+                <Lock className="w-5 h-5 text-stone-400 shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-medium text-stone-100 mb-2">
                     Content Protection
@@ -38,7 +38,7 @@ const SecurityScalability = () => {
                 </div>
               </div>
               <div className="flex gap-4">
-                <CheckCircle className="w-5 h-5 text-orange-500 shrink-0 mt-1" />
+                <CheckCircle className="w-5 h-5 text-stone-400 shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-medium text-stone-100 mb-2">
                     Compliance
@@ -50,7 +50,7 @@ const SecurityScalability = () => {
                 </div>
               </div>
               <div className="flex gap-4">
-                <Shield className="w-5 h-5 text-orange-500 shrink-0 mt-1" />
+                <Shield className="w-5 h-5 text-stone-400 shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-medium text-stone-100 mb-2">
                     Network Security
@@ -67,7 +67,7 @@ const SecurityScalability = () => {
           {/* Scalability Section */}
           <div>
             <div className="flex items-center gap-3 mb-8">
-              <div className="p-2 bg-orange-500/10 rounded-lg text-orange-500">
+              <div className="p-2 bg-stone-800 rounded-lg text-stone-200">
                 <Scale className="w-6 h-6" />
               </div>
               <h2 className="text-3xl font-serif font-medium">
@@ -85,9 +85,7 @@ const SecurityScalability = () => {
                 <span className="text-stone-300 font-medium">
                   Processing Capacity
                 </span>
-                <span className="text-orange-500 font-mono">
-                  10,000+ Hrs/Mo
-                </span>
+                <span className="text-stone-100 font-mono">10,000+ Hrs/Mo</span>
               </div>
               <div className="space-y-4">
                 <div>
@@ -98,7 +96,7 @@ const SecurityScalability = () => {
                     </span>
                   </div>
                   <div className="h-1.5 bg-stone-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-orange-600 to-orange-400 w-3/4" />
+                    <div className="h-full bg-stone-400 w-3/4" />
                   </div>
                 </div>
                 <div>
@@ -107,7 +105,7 @@ const SecurityScalability = () => {
                     <span className="text-stone-200">Petabyte Scale</span>
                   </div>
                   <div className="h-1.5 bg-stone-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-orange-600 to-orange-400 w-full" />
+                    <div className="h-full bg-stone-400 w-full" />
                   </div>
                 </div>
               </div>

@@ -20,7 +20,7 @@ const ServiceCard = ({ icon: Icon, title, description, benefits }) => (
     <ul className="space-y-2">
       {benefits.map((benefit, i) => (
         <li key={i} className="flex items-center gap-2 text-xs text-stone-500">
-          <div className="w-1 h-1 bg-orange-400 rounded-full" />
+          <div className="w-1 h-1 bg-stone-400 rounded-full" />
           {benefit}
         </li>
       ))}
@@ -34,7 +34,7 @@ const MediaServices = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="text-orange-600 font-medium tracking-wider text-sm uppercase mb-3 block">
+            <span className="text-stone-500 font-medium tracking-wider text-sm uppercase mb-3 block">
               Orchestration
             </span>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-stone-900 mb-4">

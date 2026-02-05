@@ -12,7 +12,7 @@ const InfraCTA = () => {
         <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">
           Powered by World-Class
           <br />
-          <span className="text-orange-500">Cloud Technology</span>
+          <span className="text-stone-400">Cloud Technology</span>
         </h2>
         <p className="text-xl text-stone-400 mb-12 max-w-2xl mx-auto">
           See how our AI infrastructure transforms content for global audiences
@@ -22,7 +22,7 @@ const InfraCTA = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link
             to="/contact"
-            className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-medium transition-colors flex items-center gap-2 group"
+            className="px-8 py-4 bg-stone-100 hover:bg-white text-stone-900 rounded-full font-medium transition-colors flex items-center gap-2 group"
           >
             Request Architecture Discussion
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

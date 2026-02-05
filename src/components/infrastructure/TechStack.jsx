@@ -2,9 +2,9 @@ import React from "react";
 import { Cpu, Cloud, Server, Box } from "lucide-react";
 
 const TechCard = ({ icon: Icon, title, description, details }) => (
-  <div className="bg-white p-8 rounded-2xl border border-stone-100 hover:border-orange-100 transition-colors group">
-    <div className="w-12 h-12 bg-stone-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-50 transition-colors">
-      <Icon className="w-6 h-6 text-stone-600 group-hover:text-orange-500 transition-colors" />
+  <div className="bg-white p-8 rounded-2xl border border-stone-100 hover:border-stone-300 transition-colors group">
+    <div className="w-12 h-12 bg-stone-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-stone-100 transition-colors">
+      <Icon className="w-6 h-6 text-stone-600 group-hover:text-stone-900 transition-colors" />
     </div>
     <h3 className="text-xl font-serif font-medium text-stone-900 mb-4">
       {title}
@@ -21,7 +21,7 @@ const TechCard = ({ icon: Icon, title, description, details }) => (
           key={idx}
           className="flex items-start gap-2 text-sm text-stone-600"
         >
-          <div className="w-1 h-1 rounded-full bg-orange-500 mt-2" />
+          <div className="w-1 h-1 rounded-full bg-stone-500 mt-2" />
           <span>{detail}</span>
         </div>
       ))}
@@ -85,7 +85,7 @@ const TechStack = () => {
     <section className="py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <span className="text-orange-600 font-medium tracking-wider text-sm uppercase mb-3 block">
+          <span className="text-stone-500 font-medium tracking-wider text-sm uppercase mb-3 block">
             Cloud Infrastructure
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-medium text-stone-900 mb-6">

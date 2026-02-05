@@ -19,7 +19,7 @@ const StorageRow = ({ icon: Icon, title, type, description, usage }) => (
       <span className="text-xs text-stone-400 uppercase tracking-wider block mb-1">
         Primary Use Case
       </span>
-      <span className="text-sm font-medium text-orange-600">{usage}</span>
+      <span className="text-sm font-medium text-stone-900">{usage}</span>
     </div>
   </div>
 );
