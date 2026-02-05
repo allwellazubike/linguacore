@@ -1,31 +1,30 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap");
 
 :root {
-  font-family: "Outfit", sans-serif;
-  color-scheme: dark;
-  --color-primary: #3b82f6;
-  --color-secondary: #8b5cf6;
+  font-family: "Inter", sans-serif;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #030712; /* Very dark slate/gray, almost black */
-  color: #f3f4f6;
+  background-color: #fafaf9; /* Warm stone-50 */
+  color: #1c1917; /* Stone-900 */
   overflow-x: hidden;
 }
 
-/* Custom Utilities for Glow Effects */
-@layer utilities {
-  .text-glow {
-    text-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
-  }
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
 
-  .glass-panel {
-    background: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

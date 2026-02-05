@@ -13,40 +13,35 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#about" },
-    { name: "Features", href: "#features" },
-    { name: "Cloud Architecture", href: "#architecture" },
+    { name: "About", href: "#about" },
+    { name: "Capabilities", href: "#features" },
+    { name: "Architecture", href: "#architecture" },
     { name: "Developers", href: "#developers" },
-    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "py-4 glass-panel border-b border-white/10"
-          : "py-6 bg-transparent"
+          ? "bg-white/90 backdrop-blur-md border-stone-200 py-4"
+          : "bg-transparent border-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-violet-600 flex items-center justify-center font-bold text-white text-lg">
-            LC
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white">
-            LinguaCore <span className="text-blue-400">AI</span>
+        <a href="#" className="flex items-center gap-2 group">
+          <span className="text-2xl font-serif font-bold tracking-tight text-stone-900 group-hover:opacity-80 transition-opacity">
+            LinguaCore.
           </span>
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-300 hover:text-white transition-colors hover:text-glow"
+              className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors uppercase tracking-wider hover:underline underline-offset-4 decoration-1"
             >
               {link.name}
             </a>
@@ -54,19 +49,18 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
-          <span className="text-gray-400 text-sm">EN</span>
+        <div className="hidden md:flex items-center gap-6">
           <a
             href="#"
-            className="hidden lg:block text-sm font-medium text-white hover:text-blue-300 transition-colors"
+            className="text-sm font-medium text-stone-900 hover:opacity-70 transition-opacity"
           >
             Log In
           </a>
           <a
             href="#"
-            className="px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+            className="px-6 py-2.5 bg-stone-900 text-white text-sm font-medium hover:bg-stone-800 transition-colors rounded-sm"
           >
-            Sign Up
+            Start Free
           </a>
         </div>
 
@@ -74,7 +68,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-white p-2 focus:outline-none"
+            className="text-stone-900 p-2 focus:outline-none"
           >
             {mobileMenuOpen ? (
               <svg
@@ -103,7 +97,7 @@ const Navbar = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  d="M3.75 9h16.5m-16.5 6.75h16.5"
                 />
               </svg>
             )}
@@ -113,27 +107,24 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 glass-panel border-b border-white/10 p-4 flex flex-col gap-4 animate-in slide-in-from-top-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-stone-200 p-6 flex flex-col gap-6 animate-in slide-in-from-top-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-base font-medium text-gray-300 hover:text-white block py-2"
+              className="text-lg font-serif font-medium text-stone-900 hover:text-stone-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <div className="flex flex-col gap-3 mt-4 border-t border-white/10 pt-4">
-            <a
-              href="#"
-              className="text-center text-sm font-medium text-white hover:text-blue-300 transition-colors py-2"
-            >
+          <div className="flex flex-col gap-4 mt-2 pt-6 border-t border-stone-100">
+            <a href="#" className="text-stone-900 font-medium">
               Log In
             </a>
             <a
               href="#"
-              className="text-center px-5 py-2.5 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-500 transition-all"
+              className="text-center px-6 py-3 bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm"
             >
               Start for Free
             </a>
