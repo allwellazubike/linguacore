@@ -20,7 +20,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "About", href: "/about" },
     { name: "Capabilities", href: "/features" },
-    { name: "Architecture", href: isHome ? "#architecture" : "/#architecture" },
+    { name: "Architecture", href: "/infrastructure" },
     { name: "Developers", href: isHome ? "#developers" : "/#developers" },
   ];
 
