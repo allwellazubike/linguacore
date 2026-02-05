@@ -3,12 +3,12 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-[#FAFAF9]">
-      {/* Subtle Grain Texture */}
+      {/* subtle grain texture */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-40 mix-blend-multiply pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          {/* Left Content */}
+          {/* left content */}
           <div className="lg:col-span-8">
             <div className="inline-block border-b border-stone-900 pb-1 mb-10">
               <span className="text-xs font-bold tracking-widest uppercase text-stone-900">
@@ -41,7 +41,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Abstract Visual */}
+          {/* right content */}
           <div className="lg:col-span-4 relative hidden lg:block">
             <div className="aspect-[3/4] border border-stone-200 bg-white shadow-2xl p-8 relative rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
               <div className="absolute top-0 right-0 p-4">

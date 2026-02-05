@@ -1,25 +1,23 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import PlatformOverview from "./components/PlatformOverview";
-import Features from "./components/Features";
-import Intelligence from "./components/Intelligence";
-import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
-    <div className="bg-[#FAFAF9] min-h-screen font-sans text-stone-900 selection:bg-stone-900 selection:text-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <PlatformOverview />
-        <Features />
-        <Intelligence />
-        <FAQ />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-[#FAFAF9] min-h-screen font-sans text-stone-900 selection:bg-stone-900 selection:text-white flex flex-col">
+        <Navbar />
+        <div className="grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

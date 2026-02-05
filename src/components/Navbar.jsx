@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,40 +14,53 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Check if we are on the home page for anchor links
+  const isHome = location.pathname === "/";
+
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Capabilities", href: "#features" },
-    { name: "Architecture", href: "#architecture" },
-    { name: "Developers", href: "#developers" },
+    { name: "About", href: "/about" },
+    { name: "Capabilities", href: isHome ? "#features" : "/#features" },
+    { name: "Architecture", href: isHome ? "#architecture" : "/#architecture" },
+    { name: "Developers", href: isHome ? "#developers" : "/#developers" },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md border-stone-200 py-4"
+          ? "bg-[#FAFAF9]/90 backdrop-blur-md border-stone-200 py-4"
           : "bg-transparent border-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <span className="text-2xl font-serif font-bold tracking-tight text-stone-900 group-hover:opacity-80 transition-opacity">
             LinguaCore.
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors uppercase tracking-wider hover:underline underline-offset-4 decoration-1"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith("/") && !link.href.includes("#") ? (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors uppercase tracking-wider hover:underline underline-offset-4 decoration-1"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors uppercase tracking-wider hover:underline underline-offset-4 decoration-1"
+              >
+                {link.name}
+              </a>
+            ),
+          )}
         </div>
 
         {/* Desktop Actions */}
@@ -107,17 +122,28 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-stone-200 p-6 flex flex-col gap-6 animate-in slide-in-from-top-2">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-lg font-serif font-medium text-stone-900 hover:text-stone-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#FAFAF9] border-b border-stone-200 p-6 flex flex-col gap-6 animate-in slide-in-from-top-2 shadow-xl">
+          {navLinks.map((link) =>
+            link.href.startsWith("/") && !link.href.includes("#") ? (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-lg font-serif font-medium text-stone-900 hover:text-stone-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg font-serif font-medium text-stone-900 hover:text-stone-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ),
+          )}
           <div className="flex flex-col gap-4 mt-2 pt-6 border-t border-stone-100">
             <a href="#" className="text-stone-900 font-medium">
               Log In
