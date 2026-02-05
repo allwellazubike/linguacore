@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "About", href: "/about" },
-    { name: "Capabilities", href: isHome ? "#features" : "/#features" },
+    { name: "Capabilities", href: "/features" },
     { name: "Architecture", href: isHome ? "#architecture" : "/#architecture" },
     { name: "Developers", href: isHome ? "#developers" : "/#developers" },
   ];
