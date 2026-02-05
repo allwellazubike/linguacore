@@ -131,13 +131,13 @@ const featuresData = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 bg-[#050a14] relative">
+    <section id="features" className="py-24 bg-[#FAFAF9] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-medium text-stone-900 mb-6">
             Core Platform Capabilities
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto font-light leading-relaxed">
             Powerful features designed to automate and scale your media
             localization workflow.
           </p>
@@ -147,15 +147,15 @@ const Features = () => {
           {featuresData.map((feature, index) => (
             <div
               key={index}
-              className="p-8 rounded-2xl bg-[#081020] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group hover:-translate-y-2"
+              className="p-8 rounded-sm bg-white border border-stone-200 hover:border-stone-900/30 hover:shadow-lg hover:shadow-stone-900/5 transition-all duration-300 group hover:-translate-y-1"
             >
-              <div className="w-14 h-14 rounded-full bg-blue-900/20 text-blue-400 flex items-center justify-center mb-6 border border-blue-500/10 group-hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 rounded-full bg-stone-100 text-stone-900 flex items-center justify-center mb-6 group-hover:bg-stone-900 group-hover:text-white transition-colors duration-300">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
+              <h3 className="text-xl font-serif font-medium text-stone-900 mb-3 group-hover:opacity-80 transition-opacity">
                 {feature.title}
               </h3>
-              <p className="text-gray-400 leading-relaxed text-sm">
+              <p className="text-stone-600 leading-relaxed text-sm font-light">
                 {feature.description}
               </p>
             </div>

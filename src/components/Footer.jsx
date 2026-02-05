@@ -2,20 +2,22 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#02040a] border-t border-white/10 pt-20 pb-10">
+    <footer className="bg-[#1c1917] border-t border-white/5 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* CTA Section */}
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-blue-900 to-violet-900 p-12 text-center mb-20">
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        <div className="relative rounded-sm overflow-hidden bg-[#fafaf9] p-12 text-center mb-20 border border-white/5">
+          {/* Grain Texture */}
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-multiply"></div>
+
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif font-medium text-stone-900 mb-6">
               Ready to Reach Global Audiences?
             </h2>
-            <p className="text-blue-100 text-xl mb-8">
+            <p className="text-stone-600 text-xl mb-8 font-light">
               Translate once. Dub everywhere. Scale automatically.
             </p>
             <div className="flex justify-center gap-4">
-              <button className="px-8 py-3 rounded-full bg-white text-blue-900 font-bold hover:bg-gray-100 transition-colors shadow-lg">
+              <button className="px-8 py-3 rounded-sm bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors shadow-xl shadow-stone-900/10">
                 Get Started
               </button>
             </div>
@@ -26,23 +28,20 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-violet-600 flex items-center justify-center font-bold text-white text-lg">
-                LC
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                LinguaCore <span className="text-blue-400">AI</span>
+              <span className="text-xl font-serif font-bold tracking-tight text-stone-100">
+                LinguaCore.
               </span>
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6">
+            <p className="text-stone-400 text-sm leading-relaxed mb-6 font-light">
               AI-Powered Media Localization & Multilingual Dubbing Platform.
               Cloud-native infrastructure. Not a dubbing studio.
             </p>
             <div className="flex gap-4">
-              {/* Social Icons Placeholder */}
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-500 transition-colors cursor-pointer">
+              {/* Social Icons */}
+              <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer border border-white/10">
                 <span className="sr-only">Twitter</span>
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-4 h-4 text-stone-400"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -50,10 +49,10 @@ const Footer = () => {
                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
               </div>
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-500 transition-colors cursor-pointer">
+              <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer border border-white/10">
                 <span className="sr-only">GitHub</span>
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-4 h-4 text-stone-400"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -93,13 +92,15 @@ const Footer = () => {
             },
           ].map((column, idx) => (
             <div key={idx}>
-              <h3 className="text-white font-semibold mb-6">{column.title}</h3>
+              <h3 className="text-stone-100 font-medium mb-6 font-serif">
+                {column.title}
+              </h3>
               <ul className="space-y-3">
                 {column.links.map((link, lIdx) => (
                   <li key={lIdx}>
                     <a
                       href="#"
-                      className="text-gray-500 hover:text-white transition-colors text-sm"
+                      className="text-stone-400 hover:text-stone-100 transition-colors text-sm font-light"
                     >
                       {link}
                     </a>
@@ -110,8 +111,8 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>&copy; 2026 LinguaCore AI. All rights reserved.</p>
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-stone-500 font-light">
+          <p>&copy; 2026 LinguaCore. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <span>Status: All Operational</span>
           </div>

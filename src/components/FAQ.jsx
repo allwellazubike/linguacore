@@ -37,14 +37,14 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-24 bg-[#050a14] relative">
+    <section className="py-24 bg-[#FAFAF9]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-medium text-stone-900 mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-400">
-            Find answers to common questions about LinguaCore AI.
+          <p className="text-lg text-stone-600 max-w-2xl mx-auto font-light">
+            Find answers to common questions about LinguaCore.
           </p>
         </div>
 
@@ -52,17 +52,23 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all duration-300"
+              className={`border rounded-sm overflow-hidden transition-all duration-300 ${
+                openIndex === index
+                  ? "bg-white border-stone-200 shadow-md ring-1 ring-stone-900/5"
+                  : "bg-white border-stone-200 hover:border-stone-300"
+              }`}
             >
               <button
                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="text-lg font-medium text-white">
+                <span className="text-lg font-medium text-stone-900 font-serif">
                   {faq.question}
                 </span>
                 <span
-                  className={`transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
+                  className={`transform transition-transform duration-300 text-stone-400 ${
+                    openIndex === index ? "rotate-180 text-stone-900" : ""
+                  }`}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +76,7 @@ const FAQ = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 text-gray-400"
+                    className="w-5 h-5"
                   >
                     <path
                       strokeLinecap="round"
@@ -88,7 +94,7 @@ const FAQ = () => {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="p-6 pt-0 text-gray-400 border-t border-white/5 mt-2">
+                <div className="p-6 pt-0 text-stone-600 font-light leading-relaxed border-t border-stone-100 mt-2">
                   {faq.answer}
                 </div>
               </div>
