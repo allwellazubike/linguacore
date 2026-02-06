@@ -35,8 +35,8 @@ const Hero = () => {
               <button className="px-8 py-4 bg-stone-900 text-white font-medium text-lg hover:bg-stone-800 transition-colors rounded-sm shadow-xl shadow-stone-900/10">
                 Start Building
               </button>
-              <button className="px-8 py-4 bg-transparent border border-stone-300 text-stone-900 font-medium text-lg hover:border-stone-900 transition-colors rounded-sm">
-                Read Documentation
+              <button onClick={() => navigate("/features")} className="px-8 py-4 bg-transparent border border-stone-300 text-stone-900 font-medium text-lg hover:border-stone-900 transition-colors rounded-sm">
+                View Capabilities
               </button>
             </div>
           </div>

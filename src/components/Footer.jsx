@@ -85,7 +85,7 @@ const Footer = () => {
             {
               title: "Contact",
               links: [
-                "hello@linguacore.ai",
+                "favour@linguacoreai.com",
                 "Documentation",
                 "Community Forum",
               ],
