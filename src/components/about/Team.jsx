@@ -5,6 +5,7 @@ const Team = () => {
     {
       name: "Favour Azubike",
       role: "Founder & CEO",
+      image: "/images/favour.jpg",
       quote:
         "Leads product vision, infrastructure strategy, and platform direction with focus on emerging market media localization challenges.",
       bio: "Previous experience in media technology and product management with focus on AI infrastructure and content platforms. Passionate about democratizing global content access through language technology.",
@@ -12,17 +13,18 @@ const Team = () => {
     {
       name: "Shepherds Benjamin",
       role: "Co-Founder & Head of Engineering",
+      image: "/images/benjamin.jpg",
       quote:
         "Architecting distributed media processing systems, AI model deployment, and cloud infrastructure for reliable operation at scale.",
       bio: "Infrastructure engineer with expertise in cloud-native architecture, distributed systems, and large-scale media processing. Previously worked on video transcoding platforms and real-time audio processing systems.",
     },
-    {
-      name: "Amina Hassan",
-      role: "Lead AI Engineer",
-      quote:
-        "Driving AI research, multilingual speech technology development, and voice synthesis innovation.",
-      bio: "Machine learning engineer specializing in speech recognition, neural machine translation, and voice synthesis. Published researcher in African language speech technology and low-resource language AI.",
-    },
+    // {
+    //   name: "Amina Hassan",
+    //   role: "Lead AI Engineer",
+    //   quote:
+    //     "Driving AI research, multilingual speech technology development, and voice synthesis innovation.",
+    //   bio: "Machine learning engineer specializing in speech recognition, neural machine translation, and voice synthesis. Published researcher in African language speech technology and low-resource language AI.",
+    // },
   ];
 
   return (
@@ -42,17 +44,18 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
               className="group relative bg-[#FAFAF9] p-8 border border-stone-100 hover:border-stone-200 transition-colors"
             >
-              <div className="w-20 h-20 bg-stone-200 mb-6 rounded-sm overflow-hiddengrayscale group-hover:grayscale-0 transition-all">
-                {/* Placeholder for professional photo */}
-                <div className="w-full h-full flex items-center justify-center text-stone-400 font-serif text-2xl font-bold bg-stone-100">
-                  {member.name.charAt(0)}
-                </div>
+              <div className="w-24 h-24 bg-stone-200 mb-6 rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all border-2 border-transparent group-hover:border-stone-900">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-serif font-bold text-stone-900">
                 {member.name}
