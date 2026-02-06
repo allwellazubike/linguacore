@@ -104,15 +104,24 @@ const FeaturesFAQ = () => {
           Ready to Go Global?
         </h2>
         <div className="flex flex-wrap justify-center gap-4">
-          <button className="px-8 py-3 bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm shadow-xl shadow-stone-900/10">
+          <a
+            href="mailto:favour@linguacoreai.com"
+            className="px-8 py-3 bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm shadow-xl shadow-stone-900/10 inline-block"
+          >
             Get Started
-          </button>
-          <button className="px-8 py-3 bg-white border border-stone-200 text-stone-900 font-medium hover:bg-stone-50 transition-colors rounded-sm">
+          </a>
+          <a
+            href="mailto:favour@linguacoreai.com"
+            className="px-8 py-3 bg-white border border-stone-200 text-stone-900 font-medium hover:bg-stone-50 transition-colors rounded-sm inline-block"
+          >
             Request Demo
-          </button>
-          <button className="px-8 py-3 text-stone-600 font-medium hover:text-stone-900 transition-colors underline decoration-stone-300 hover:decoration-stone-900 underline-offset-4">
+          </a>
+          <a
+            href="mailto:favour@linguacoreai.com"
+            className="px-8 py-3 text-stone-600 font-medium hover:text-stone-900 transition-colors underline decoration-stone-300 hover:decoration-stone-900 underline-offset-4 inline-block"
+          >
             View Pricing
-          </button>
+          </a>
         </div>
       </div>
     </section>

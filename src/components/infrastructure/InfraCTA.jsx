@@ -27,9 +27,12 @@ const InfraCTA = () => {
             Request Architecture Discussion
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-          <button className="px-8 py-4 bg-transparent border border-stone-700 hover:border-stone-500 text-white rounded-full font-medium transition-colors">
+          <a
+            href="mailto:favour@linguacoreai.com"
+            className="px-8 py-4 bg-transparent border border-stone-700 hover:border-stone-500 text-white rounded-full font-medium transition-colors inline-block"
+          >
             View Platform Documentation
-          </button>
+          </a>
         </div>
       </div>
     </section>
