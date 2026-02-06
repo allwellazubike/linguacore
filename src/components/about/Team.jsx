@@ -3,14 +3,14 @@ import React from "react";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Fey Azubike",
+      name: "Favour Azubike",
       role: "Founder & CEO",
       quote:
         "Leads product vision, infrastructure strategy, and platform direction with focus on emerging market media localization challenges.",
       bio: "Previous experience in media technology and product management with focus on AI infrastructure and content platforms. Passionate about democratizing global content access through language technology.",
     },
     {
-      name: "Chisom Okonkwo",
+      name: "Shepherds Benjamin",
       role: "Co-Founder & Head of Engineering",
       quote:
         "Architecting distributed media processing systems, AI model deployment, and cloud infrastructure for reliable operation at scale.",
