@@ -27,7 +27,7 @@ const Hero = () => {
               LinguaCore provides the complete infrastructure to automatically
               translate, dub, and localize media at scale.
               <span className="block mt-4 text-stone-900 font-normal">
-                No studios. No actors. Just pure scale.
+                No studios. No actors. Just fully automated.
               </span>
             </p>
 
