@@ -1,6 +1,8 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-[#1c1917] border-t border-white/5 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +19,10 @@ const Footer = () => {
               Translate once. Dub everywhere. Scale automatically.
             </p>
             <div className="flex justify-center gap-4">
-              <button className="px-8 py-3 rounded-sm bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors shadow-xl shadow-stone-900/10">
+              <button
+                onClick={() => navigate("/contact")}
+                className="px-8 py-3 rounded-sm bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors shadow-xl shadow-stone-900/10"
+              >
                 Get Started
               </button>
             </div>
@@ -71,23 +76,30 @@ const Footer = () => {
             {
               title: "Quick Links",
               links: [
-                "About Us",
-                "Features",
-                "Cloud Architecture",
-                "Developers",
-                "Get Started",
+                { name: "About Us", href: "/about" },
+                { name: "Features", href: "/features" },
+                { name: "Cloud Architecture", href: "/infrastructure" },
+                { name: "Developers", href: "/developers" },
+                { name: "Get Started", href: "/contact" },
               ],
             },
             {
               title: "Legal",
-              links: ["Privacy Policy", "Terms of Service", "Security"],
+              links: [
+                { name: "Privacy Policy", href: "#" },
+                { name: "Terms of Service", href: "#" },
+                { name: "Security", href: "/infrastructure" },
+              ],
             },
             {
               title: "Contact",
               links: [
-                "favour@linguacoreai.com",
-                "Documentation",
-                "Community Forum",
+                {
+                  name: "favour@linguacoreai.com",
+                  href: "mailto:favour@linguacoreai.com",
+                },
+                { name: "Documentation", href: "/developers" },
+                { name: "Enterprise Inquiry", href: "/contact" },
               ],
             },
           ].map((column, idx) => (
@@ -98,12 +110,21 @@ const Footer = () => {
               <ul className="space-y-3">
                 {column.links.map((link, lIdx) => (
                   <li key={lIdx}>
-                    <a
-                      href="#"
-                      className="text-stone-400 hover:text-stone-100 transition-colors text-sm font-light"
-                    >
-                      {link}
-                    </a>
+                    {link.href.startsWith("/") ? (
+                      <Link
+                        to={link.href}
+                        className="text-stone-400 hover:text-stone-100 transition-colors text-sm font-light"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-stone-400 hover:text-stone-100 transition-colors text-sm font-light"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -113,9 +134,6 @@ const Footer = () => {
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-stone-500 font-light">
           <p>&copy; 2026 LinguaCore. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <span>Status: All Operational</span>
-          </div>
         </div>
       </div>
     </footer>
