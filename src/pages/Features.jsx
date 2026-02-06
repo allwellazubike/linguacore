@@ -5,7 +5,6 @@ import ProcessingInfrastructure from "../components/features/ProcessingInfrastru
 import SystemCharacteristics from "../components/features/SystemCharacteristics";
 import UseCases from "../components/features/UseCases";
 import IntegrationSecurity from "../components/features/IntegrationSecurity";
-import CaseStudy from "../components/features/CaseStudy";
 import FeaturesFAQ from "../components/features/FeaturesFAQ";
 
 const Features = () => {
@@ -22,7 +21,6 @@ const Features = () => {
       <SystemCharacteristics />
       <UseCases />
       <IntegrationSecurity />
-      <CaseStudy />
       <FeaturesFAQ />
     </main>
   );
