@@ -50,7 +50,7 @@ const Team = () => {
               key={idx}
               className="group relative bg-[#FAFAF9] p-8 border border-stone-100 hover:border-stone-200 transition-colors"
             >
-              <div className="w-24 h-24 bg-stone-200 mb-6 rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all border-2 border-transparent group-hover:border-stone-900">
+              <div className="w-24 h-24 bg-stone-200 mb-6 rounded-full overflow-hidden border-2 border-stone-200">
                 <img
                   src={member.image}
                   alt={member.name}
