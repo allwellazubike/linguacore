@@ -19,12 +19,12 @@ const Footer = () => {
               Translate once. Dub everywhere. Scale automatically.
             </p>
             <div className="flex justify-center gap-4">
-              <button
-                onClick={() => navigate("/contact")}
+              <a
+                href="mailto:favour@linguacoreai.com"
                 className="px-8 py-3 rounded-sm bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors shadow-xl shadow-stone-900/10"
               >
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Footer = () => {
                 { name: "Features", href: "/features" },
                 { name: "Cloud Architecture", href: "/infrastructure" },
                 { name: "Developers", href: "/developers" },
-                { name: "Get Started", href: "/contact" },
+                { name: "Contact", href: "/contact" },
               ],
             },
             {

@@ -67,13 +67,13 @@ const Navbar = () => {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-6">
           <a
-            href="#"
+            href="mailto:favour@linguacoreai.com"
             className="text-sm font-medium text-stone-900 hover:opacity-70 transition-opacity"
           >
             Log In
           </a>
           <a
-            href="#"
+            href="mailto:favour@linguacoreai.com"
             className="px-6 py-2.5 bg-stone-900 text-white text-sm font-medium hover:bg-stone-800 transition-colors rounded-sm"
           >
             Start Free
@@ -146,11 +146,14 @@ const Navbar = () => {
             ),
           )}
           <div className="flex flex-col gap-4 mt-2 pt-6 border-t border-stone-100">
-            <a href="#" className="text-stone-900 font-medium">
+            <a
+              href="mailto:favour@linguacoreai.com"
+              className="text-stone-900 font-medium"
+            >
               Log In
             </a>
             <a
-              href="#"
+              href="mailto:favour@linguacoreai.com"
               className="text-center px-6 py-3 bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm"
             >
               Start for Free

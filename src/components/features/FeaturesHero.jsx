@@ -22,9 +22,12 @@ const FeaturesHero = () => {
           global scale.
         </p>
         <div>
-          <button className="px-8 py-4 bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm shadow-xl shadow-stone-900/10">
+          <a
+            href="mailto:favour@linguacoreai.com"
+            className="px-8 py-4 bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm shadow-xl shadow-stone-900/10 inline-block"
+          >
             Get Started
-          </button>
+          </a>
         </div>
       </div>
     </section>

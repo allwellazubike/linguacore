@@ -20,13 +20,13 @@ const InfraCTA = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Link
-            to="/contact"
+          <a
+            href="mailto:favour@linguacoreai.com"
             className="px-8 py-4 bg-stone-100 hover:bg-white text-stone-900 rounded-full font-medium transition-colors flex items-center gap-2 group"
           >
             Request Architecture Discussion
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </a>
           <button className="px-8 py-4 bg-transparent border border-stone-700 hover:border-stone-500 text-white rounded-full font-medium transition-colors">
             View Platform Documentation
           </button>

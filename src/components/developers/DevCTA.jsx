@@ -13,10 +13,13 @@ const DevCTA = () => {
           Full platform access to test your integration.
         </p>
 
-        <button className="px-8 py-4 bg-white text-stone-900 hover:bg-stone-100 rounded-sm font-medium transition-colors flex items-center gap-2 mx-auto">
+        <a
+          href="mailto:favour@linguacoreai.com"
+          className="px-8 py-4 bg-white text-stone-900 hover:bg-stone-100 rounded-sm font-medium transition-colors flex items-center gap-2 mx-auto inline-flex"
+        >
           Get Your Free API Key
           <ArrowRight className="w-5 h-5" />
-        </button>
+        </a>
       </div>
     </section>
   );

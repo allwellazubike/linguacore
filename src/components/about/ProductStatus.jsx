@@ -85,12 +85,18 @@ const ProductStatus = () => {
               infrastructure built for global scale.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="px-8 py-4 bg-white text-stone-900 font-bold hover:bg-stone-100 transition-colors rounded-sm">
+              <a
+                href="mailto:favour@linguacoreai.com"
+                className="px-8 py-4 bg-white text-stone-900 font-bold hover:bg-stone-100 transition-colors rounded-sm inline-block"
+              >
                 Get Started
-              </button>
-              <button className="px-8 py-4 bg-transparent border border-stone-700 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm">
+              </a>
+              <a
+                href="mailto:favour@linguacoreai.com"
+                className="px-8 py-4 bg-transparent border border-stone-700 text-white font-medium hover:bg-stone-800 transition-colors rounded-sm inline-block"
+              >
                 Request Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>

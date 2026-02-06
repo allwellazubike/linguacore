@@ -31,10 +31,13 @@ const DevHero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4">
-            <button className="px-8 py-4 bg-stone-900 text-white font-medium text-lg hover:bg-stone-800 transition-colors rounded-sm shadow-xl shadow-stone-900/10 flex items-center gap-2">
+            <a
+              href="mailto:favour@linguacoreai.com"
+              className="px-8 py-4 bg-stone-900 text-white font-medium text-lg hover:bg-stone-800 transition-colors rounded-sm shadow-xl shadow-stone-900/10 flex items-center gap-2"
+            >
               Get API Key
               <ChevronRight className="w-5 h-5" />
-            </button>
+            </a>
             <button className="px-8 py-4 bg-white border border-stone-200 text-stone-900 font-medium text-lg hover:border-stone-900 transition-colors rounded-sm flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-stone-500" />
               View Documentation
