@@ -94,6 +94,14 @@ const Contact = () => {
                   </button>
                 </div>
 
+                <a
+                  href={`mailto:${email}`}
+                  className="w-full py-4 bg-stone-900 hover:bg-stone-800 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 mb-8 shadow-lg shadow-stone-900/10 group/btn"
+                >
+                  <Mail className="w-5 h-5 group-hover/btn:scale-110 transition-transform" />
+                  Send Message Directly
+                </a>
+
                 <div className="space-y-6">
                   <div className="flex items-center gap-4 text-stone-600">
                     <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center shrink-0">
