@@ -86,8 +86,14 @@ const Footer = () => {
             {
               title: "Legal",
               links: [
-                { name: "Privacy Policy", href: "#" },
-                { name: "Terms of Service", href: "#" },
+                {
+                  name: "Privacy Policy",
+                  href: "mailto:favour@linguacoreai.com",
+                },
+                {
+                  name: "Terms of Service",
+                  href: "mailto:favour@linguacoreai.com",
+                },
                 { name: "Security", href: "/infrastructure" },
               ],
             },
