@@ -1,6 +1,7 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-[#FAFAF9]">
       {/* subtle grain texture */}
